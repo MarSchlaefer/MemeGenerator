@@ -1,0 +1,62 @@
+{
+  "memes": [
+    {
+      "id": 1,
+      "title": "boromir",
+      "image_url": "https://www.meme-arsenal.com/memes/7aa1f72a227f5ae408460ce5e7cee112.jpg"
+    },
+    {
+      "id": 2,
+      "title": "kermit",
+      "image_url": "https://pbs.twimg.com/profile_images/839900475205955585/FMzXSOkV_400x400.jpg"
+    },
+    {
+      "id": 3,
+      "title": "cardi b",
+      "image_url": "http://www.latina.com/sites/default/files/young_cardi_b.jpg"
+    },
+    {
+      "id": 4,
+      "title": "math lady",
+      "image_url": "https://i.kym-cdn.com/entries/icons/facebook/000/021/464/14608107_1180665285312703_1558693314_n.jpg"
+    },
+    {
+      "id": 5,
+      "title": "always thinking",
+      "image_url": "https://pixel.nymag.com/imgs/daily/selectall/2017/02/09/09-roll-safe.w600.h315.2x.jpg"
+    },
+    {
+      "id": 6,
+      "title": "zuckerbot",
+      "image_url": "https://cnet3.cbsistatic.com/img/D0tFhxdZEqsyQxce0MC31xLWLas=/830x467/2018/04/10/b014e667-9a5c-44d3-84ee-a1c5fba5ffae/markzuckerbergcrop.jpg"
+    },
+    {
+      "id": 7,
+      "title": "michael phelps",
+      "image_url": "http://timeinc.brightcove.com.edgesuite.net/rtmp_uds/416418724/201608/3053/416418724_5076780810001_Phelps-1280.jpg?pubId=293884104&videoId=5076946492001"
+    },
+    {
+      "id": 8,
+      "title": "yelling baby",
+      "image_url": "https://i.kym-cdn.com/entries/icons/original/000/000/510/angrybaby.jpg"
+    },
+    {
+      "id": 9,
+      "title": "happy alpaca",
+      "image_url": "https://i.redd.it/7wst2mzmlzky.jpg"
+    },
+    {
+      "id": 10,
+      "title": "distracted boyfriend",
+      "image_url": "https://media.wired.com/photos/59a459d3b345f64511c5e3d4/master/pass/MemeLoveTriangle_297886754.jpg"
+    },
+    {
+      "id": 11,
+      "title": "take my money",
+      "image_url": "https://imgflip.com/s/meme/Shut-Up-And-Take-My-Money-Fry.jpg"
+    }
+  ],
+  "createdMemes": [
+    
+  ]
+}
