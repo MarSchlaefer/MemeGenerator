@@ -52,6 +52,7 @@ export default class MemeList extends Component {
       return <CreatedMeme
         key={createdMeme.id}
         memeObj={createdMeme}
+        handleNewClick={this.props.handleNewClick}
         />
     })
   }

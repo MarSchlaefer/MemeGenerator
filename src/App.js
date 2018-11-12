@@ -12,7 +12,8 @@ class App extends Component {
       currentMemeId: null,
       createdMemesArray: [],
       saveClicked: false,
-      createdMemeId: null
+      createdMemeId: null,
+      newCurrentId: null
     }
   }
 
@@ -35,6 +36,7 @@ class App extends Component {
               allMemes={this.state.memesArray}
               handleMemeClick={this.handleMemeClick}
               allCreatedMemes={this.state.createdMemesArray}
+              handleNewClick={this.handleNewClick}
             />
           </div>
           <div className='master-detail-element detail'>
@@ -47,6 +49,7 @@ class App extends Component {
               allCreatedMemes={this.state.createdMemesArray}
               reRenderMemes={this.reRenderMemes}
               createdMemeId={this.state.createdMemeId}
+              newCurrentId={this.state.newCurrentId}
             />
           </div>
         </div>
@@ -79,12 +82,22 @@ class App extends Component {
   handleMemeClick = (event, id) =>{
     console.log('clicked')
     this.setState({
-      currentMemeId: id
+      currentMemeId: id,
+      createdMemeId: null,
+      saveClicked: false
     }, console.log(id))
   }
 
   handleCancelClick = (event) => {
     this.setState({
+      currentMemeId: null
+    })
+  }
+
+  handleNewClick = (event, id) => {
+    console.log('clicked')
+    this.setState({
+      newCurrentId: id,
       currentMemeId: null
     })
   }

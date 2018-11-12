@@ -11,6 +11,7 @@ export default class ShowMeme extends Component {
           <img src={this.findNewMeme().image} width="400" height="300"/>
           <p className="bottom">{this.findNewMeme().bottom}</p>
         </div>
+        <h1>Congrats! You made new meme! You're soo comical!</h1>
       </div>
     )
   }

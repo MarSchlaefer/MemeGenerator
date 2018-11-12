@@ -4,7 +4,7 @@ export default class CreatedMeme extends Component {
 
   render() {
     return (
-      <div>
+      <div onClick={(event) => this.props.handleNewClick(event, this.props.memeObj.id)}>
         <h2>{this.props.memeObj.title}</h2>
         <div className="meme">
           <p className="top">{this.props.memeObj.top}</p>

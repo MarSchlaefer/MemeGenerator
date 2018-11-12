@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Instructions from './Instructions'
 import CreateMemeForm from './CreateMemeForm'
 import ShowMeme from './ShowMeme'
+import ShowClickedMeme from './ShowClickedMeme'
 
 export default class Content extends Component{
 
@@ -15,10 +16,17 @@ export default class Content extends Component{
 
   renderContent = () => {
       if (this.props.currentMemeId && this.props.saveClicked) {
-        return <ShowMeme createdMemeId={this.props.createdMemeId}
-          allCreatedMemes={this.props.allCreatedMemes}/>
+        return <ShowMeme
+          createdMemeId={this.props.createdMemeId}
+          allCreatedMemes={this.props.allCreatedMemes}
+          />
       } else if (this.props.currentMemeId) {
         return this.renderForm()
+      } else if (this.props.newCurrentId){
+        return <ShowClickedMeme
+          allCreatedMemes={this.props.allCreatedMemes}
+          newCurrentId={this.props.newCurrentId}
+        />
       } else {
         return <Instructions />
     }

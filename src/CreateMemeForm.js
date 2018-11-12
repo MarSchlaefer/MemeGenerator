@@ -44,7 +44,7 @@ export default class CreateMemeForm extends Component {
   render() {
     return (
       <div>
-        <img src={this.props.currentMeme.image_url}/>
+        <img src={this.props.currentMeme.image_url} width='400' height='300'/>
         <form onSubmit={this.handleSubmit}>
           <label> Title: </label>
             <input onChange={this.handleChange} type='text' name="title" value={this.state.title}></input>
