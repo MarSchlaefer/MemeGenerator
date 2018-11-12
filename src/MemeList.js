@@ -1,60 +1,60 @@
 import React, { Component } from 'react';
 import Meme from './Meme'
-import CreateMemeForm from './CreateMemeForm'
+import ListDisplay from './ListDisplay'
+import CreatedMeme from './CreatedMeme'
 
 export default class MemeList extends Component {
 
   constructor() {
     super()
     this.state = {
-      currentMemeId: null
+      currentListView: 'original-images'
     }
   }
 
   render() {
     return (
       <div>
-        {this.makeMemes()}
-        {this.renderForm()}
+        <ListDisplay handleSelectChange={this.handleSelectChange}/>
+        {this.displaySelection()}
       </div>
     )
   }
 
-  makeMemes = () => {
+  displaySelection = () => {
+    if (this.state.currentListView === 'original-images') {
+      return this.makeImages()
+    } else {
+      return this.makeMemes()
+    }
+  }
+
+
+  handleSelectChange = (e) => {
+    console.log(e.target.value);
+    this.setState({
+      currentListView: e.target.value
+    })
+  }
+
+  makeImages = () => {
     return this.props.allMemes.map(meme => {
       return <Meme
         key={meme.id}
         memeObj={meme}
-        handleMemeClick={this.handleMemeClick}
+        handleMemeClick={this.props.handleMemeClick}
         />
     })
   }
 
-  renderForm = () => {
-    if (this.state.currentMemeId) {
-      return <CreateMemeForm
-        allMemes={this.props.allMemes}
-        currentMeme={this.findCurrentMeme()}
-        handleCancelClick={this.handleCancelClick}
+  makeMemes = () => {
+    return this.props.allCreatedMemes.map(createdMeme => {
+      return <CreatedMeme
+        key={createdMeme.id}
+        memeObj={createdMeme}
         />
-    }
-  }
-
-  handleMemeClick = (event, id) =>{
-    console.log('clicked')
-    this.setState({
-      currentMemeId: id
-    }, console.log(id))
-  }
-
-  findCurrentMeme = () => {
-    return this.props.allMemes.find(meme => this.state.currentMemeId === meme.id)
-  }
-
-  handleCancelClick = (event) => {
-    this.setState({
-      currentMemeId: null
     })
   }
+
 
 } // end of class

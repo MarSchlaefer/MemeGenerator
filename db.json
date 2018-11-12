@@ -56,7 +56,62 @@
       "image_url": "https://imgflip.com/s/meme/Shut-Up-And-Take-My-Money-Fry.jpg"
     }
   ],
-  "createdMemes": [
-    
+  "created_memes": [
+    {
+      "image": "https://www.meme-arsenal.com/memes/7aa1f72a227f5ae408460ce5e7cee112.jpg",
+      "title": "Read the Read ME!!",
+      "top": "One does not simply",
+      "bottom": "ignore the README",
+      "parent_id": 1,
+      "id": 1
+    },
+    {
+      "image": "https://imgflip.com/s/meme/Shut-Up-And-Take-My-Money-Fry.jpg",
+      "title": "Donut Place",
+      "top": "When Flatiron said tuition was $15K",
+      "bottom": "Shut up and take my money!",
+      "parent_id": 11,
+      "id": 2
+    },
+    {
+      "image": "https://i.kym-cdn.com/entries/icons/facebook/000/021/464/14608107_1180665285312703_1558693314_n.jpg",
+      "title": "Recursion",
+      "top": "Recursion",
+      "bottom": "",
+      "parent_id": 4,
+      "id": 3
+    },
+    {
+      "image": "https://cnet3.cbsistatic.com/img/D0tFhxdZEqsyQxce0MC31xLWLas=/830x467/2018/04/10/b014e667-9a5c-44d3-84ee-a1c5fba5ffae/markzuckerbergcrop.jpg",
+      "title": "Mike's Meme",
+      "top": "When you've been looking at recursion all day",
+      "bottom": "",
+      "parent_id": 6,
+      "id": 4
+    },
+    {
+      "image": "https://pixel.nymag.com/imgs/daily/selectall/2017/02/09/09-roll-safe.w600.h315.2x.jpg",
+      "title": "Always thinking",
+      "top": "You can't get a red light",
+      "bottom": "if you don't test",
+      "parent_id": 5,
+      "id": 6
+    },
+    {
+      "image": "https://pbs.twimg.com/profile_images/839900475205955585/FMzXSOkV_400x400.jpg",
+      "title": "New Kermit",
+      "top": "",
+      "bottom": "Me on day one of Mod 1",
+      "parent_id": 2,
+      "id": 7
+    },
+    {
+      "image": "http://www.latina.com/sites/default/files/young_cardi_b.jpg",
+      "title": "Cardiiii",
+      "top": "Me: Get outta my room",
+      "bottom": "Sibling: I'm not in your room",
+      "parent_id": 3,
+      "id": 8
+    }
   ]
 }

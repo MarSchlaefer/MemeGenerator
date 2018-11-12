@@ -8,21 +8,20 @@ export default class CreateMemeForm extends Component {
     this.state = {
       title: '',
       top: '',
-      bottom: ''
+      bottom: '',
     }
   }
 
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
-    }, () => {
-      console.log(this.state);
     })
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:3000/createdMemes', {
+    // this.props.setSaveClicked()
+    fetch('http://localhost:3000/created_memes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,19 +33,19 @@ export default class CreateMemeForm extends Component {
         bottom: this.state.bottom,
         parent_id: this.props.currentMeme.id
       })
-    }).then(resp => resp.json())
-    .then(console.log)
+    })
+    .then(resp => resp.json())
+    .then(json => {
+      this.props.reRenderMemes(json)
+    })
   }
 
 
   render() {
-    console.log(this.props.currentMeme)
     return (
       <div>
         <img src={this.props.currentMeme.image_url}/>
         <form onSubmit={this.handleSubmit}>
-          <label> Image: </label>
-            <input type='url' name='image' value={this.props.currentMeme.image_url}></input>
           <label> Title: </label>
             <input onChange={this.handleChange} type='text' name="title" value={this.state.title}></input>
           <label> Top Text: </label>
