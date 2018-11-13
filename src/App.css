@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|IBM+Plex+Mono|Poppins');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
 .App {
+  font-family: 'Didact Gothic', sans-serif;
   display: flex;
   flex-direction: column;
   height: calc(100vh - 10px);
@@ -15,9 +19,8 @@
 
 .nav-bar {
   width: 100%;
-  background-image: linear-gradient(to right top, #8C33E3, #696CE8, #4A9EEC);
+  background-color: lightblue;
   background-repeat: no-repeat;
-  font-family: 'IBM Plex Mono';
   font-size: 16px;
   letter-spacing: 1.5px;
   font-weight: bolder;
@@ -37,17 +40,26 @@
 .sidebar {
   width: 30%;
   overflow: scroll;
+  background-color: lightblue;
+  margin: 10px 10px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .detail {
   width: 70%;
+  background-color: lightblue;
+  margin: 10px 0px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .master-detail-element {
   float: left;
-  margin: 10px 0px;
   padding: 20px;
-  border: 2px solid black;
 }
 
 .meme {
@@ -81,10 +93,84 @@ p {
  2px 2px 5px #000;
 }
 
+.orig-image{
+  margin: 10px;
+  width: 400px;
+  height: 300px;
+  background-size: 100%;
+  text-align: center;
+  position: relative;
+}
+
+h3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact;
+  font-size: 4.5em;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+.image-text{
+  bottom: 0;
+}
+
 .bottom {
   bottom: 0;
 }
 
 .top {
   top: 0;
+}
+
+button {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.0em;
+  border-radius: 5px;
+}
+
+select {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.0em;
+  border-radius: 5px;
+}
+
+input {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.0em;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.searchArea {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 3px;
+}
+
+img:hover {
+  box-shadow: 10px 10px 13px -9px rgba(0,0,0,0.47);
+}
+
+button:hover {
+  background-color: #D3D3D3;
+}
+
+select:hover {
+  background-color: #D3D3D3;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

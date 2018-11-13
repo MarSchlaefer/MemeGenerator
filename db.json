@@ -89,8 +89,8 @@
     {
       "image": "https://cnet3.cbsistatic.com/img/D0tFhxdZEqsyQxce0MC31xLWLas=/830x467/2018/04/10/b014e667-9a5c-44d3-84ee-a1c5fba5ffae/markzuckerbergcrop.jpg",
       "title": "Mike's Meme",
-      "top": "When you've been looking at recursion all day",
-      "bottom": "",
+      "top": "",
+      "bottom": "When you've been looking at recursion all day",
       "parent_id": 6,
       "id": 4
     },
@@ -117,14 +117,6 @@
       "bottom": "Sibling: I'm not in your room",
       "parent_id": 3,
       "id": 8
-    },
-    {
-      "image": "https://www.meme-arsenal.com/memes/7aa1f72a227f5ae408460ce5e7cee112.jpg",
-      "title": "boro2",
-      "top": "PEACE O",
-      "bottom": "CRAPPY Poop",
-      "parent_id": 1,
-      "id": 9
     },
     {
       "image": "https://i.ytimg.com/vi/3xYXUeSmb-Y/maxresdefault.jpg",
