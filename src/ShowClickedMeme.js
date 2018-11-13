@@ -13,14 +13,15 @@ export default class ShowClickedMeme extends Component{
             <p className="bottom">{this.findNewMeme().bottom}</p>
           </div>
         </div>
+        <button onClick={this.props.handleEditClick}>Edit</button>
+        <button onClick={(event) => this.props.handleDeleteClick(event, this.findNewMeme().id)}>Delete</button>
       </div>
     )
   }
 
   findNewMeme = () => {
     // debugger
-    console.log(this.props.newCurrentId)
-    return this.props.allCreatedMemes.find(meme => this.props.newCurrentId === meme.id)
+    return this.props.allCreatedMemes.find(meme => this.props.showClickedMemeId === meme.id)
   }
 
 } //end of class

@@ -8,12 +8,13 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      memesArray: [],
-      currentMemeId: null,
+      imagesArray: [],
+      currentImageId: null,
       createdMemesArray: [],
       saveClicked: false,
       createdMemeId: null,
-      newCurrentId: null
+      showClickedMemeId: null,
+      deleteClicked: false
     }
   }
 
@@ -33,7 +34,7 @@ class App extends Component {
         <div className="container">
           <div className='master-detail-element sidebar'>
             <MemeList
-              allMemes={this.state.memesArray}
+              allImages={this.state.imagesArray}
               handleMemeClick={this.handleMemeClick}
               allCreatedMemes={this.state.createdMemesArray}
               handleNewClick={this.handleNewClick}
@@ -41,15 +42,17 @@ class App extends Component {
           </div>
           <div className='master-detail-element detail'>
             <Content
-              currentMemeId={this.state.currentMemeId}
-              allMemes={this.state.memesArray}
+              currentImageId={this.state.currentImageId}
+              allImages={this.state.imagesArray}
               handleCancelClick={this.handleCancelClick}
               setSaveClicked={this.setSaveClicked}
               saveClicked={this.state.saveClicked}
               allCreatedMemes={this.state.createdMemesArray}
               reRenderMemes={this.reRenderMemes}
               createdMemeId={this.state.createdMemeId}
-              newCurrentId={this.state.newCurrentId}
+              showClickedMemeId={this.state.showClickedMemeId}
+              handleDeleteClick={this.handleDeleteClick}
+              deleteClicked={this.state.deleteClicked}
             />
           </div>
         </div>
@@ -63,7 +66,7 @@ class App extends Component {
     .then(json => {
       console.log(json)
       this.setState({
-        memesArray: json
+        imagesArray: json
       })
     })
   }
@@ -82,7 +85,7 @@ class App extends Component {
   handleMemeClick = (event, id) =>{
     console.log('clicked')
     this.setState({
-      currentMemeId: id,
+      currentImageId: id,
       createdMemeId: null,
       saveClicked: false
     }, console.log(id))
@@ -90,15 +93,38 @@ class App extends Component {
 
   handleCancelClick = (event) => {
     this.setState({
-      currentMemeId: null
+      currentImageId: null
     })
+  }
+
+  handleDeleteClick = (event, id) => {
+    console.log(' in delete function')
+    fetch(`http://localhost:3000/created_memes/${id}`, {
+      'method': 'DELETE'
+    })
+    .then(this.setState({
+      createdMemesArray: this.removeDeletedMeme(id)
+    }, console.log(this.state)))
+    .then(this.reRenderDelete())
+  }
+
+  reRenderDelete = () => {
+    this.setState({
+      createdMemeId: null,
+      deleteClicked: true,
+      showClickedMemeId: null
+    })
+  }
+
+  removeDeletedMeme = (id) => {
+    return this.state.createdMemesArray.filter(meme => meme.id !== id)
   }
 
   handleNewClick = (event, id) => {
     console.log('clicked')
     this.setState({
-      newCurrentId: id,
-      currentMemeId: null
+      showClickedMemeId: id,
+      currentImageId: null
     })
   }
 

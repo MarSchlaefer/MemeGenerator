@@ -112,46 +112,6 @@
       "bottom": "Sibling: I'm not in your room",
       "parent_id": 3,
       "id": 8
-    },
-    {
-      "image": "https://www.meme-arsenal.com/memes/7aa1f72a227f5ae408460ce5e7cee112.jpg",
-      "title": "",
-      "top": "",
-      "bottom": "",
-      "parent_id": 1,
-      "id": 9
-    },
-    {
-      "image": "https://pbs.twimg.com/profile_images/839900475205955585/FMzXSOkV_400x400.jpg",
-      "title": "",
-      "top": "",
-      "bottom": "",
-      "parent_id": 2,
-      "id": 10
-    },
-    {
-      "image": "https://pbs.twimg.com/profile_images/839900475205955585/FMzXSOkV_400x400.jpg",
-      "title": "1",
-      "top": "2",
-      "bottom": "3",
-      "parent_id": 2,
-      "id": 11
-    },
-    {
-      "image": "https://www.meme-arsenal.com/memes/7aa1f72a227f5ae408460ce5e7cee112.jpg",
-      "title": "",
-      "top": "",
-      "bottom": "",
-      "parent_id": 1,
-      "id": 12
-    },
-    {
-      "image": "https://pbs.twimg.com/profile_images/839900475205955585/FMzXSOkV_400x400.jpg",
-      "title": "",
-      "top": "",
-      "bottom": "",
-      "parent_id": 2,
-      "id": 13
     }
   ]
 }

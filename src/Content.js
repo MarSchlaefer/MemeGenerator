@@ -15,26 +15,27 @@ export default class Content extends Component{
   }
 
   renderContent = () => {
-      if (this.props.currentMemeId && this.props.saveClicked) {
+      if (this.props.currentImageId && this.props.saveClicked) {
         return <ShowMeme
           createdMemeId={this.props.createdMemeId}
           allCreatedMemes={this.props.allCreatedMemes}
           />
-      } else if (this.props.currentMemeId) {
+      } else if (this.props.currentImageId) {
         return this.renderForm()
-      } else if (this.props.newCurrentId){
+      } else if (this.props.showClickedMemeId){
         return <ShowClickedMeme
           allCreatedMemes={this.props.allCreatedMemes}
-          newCurrentId={this.props.newCurrentId}
+          showClickedMemeId={this.props.showClickedMemeId}
+          handleDeleteClick={this.props.handleDeleteClick}
         />
       } else {
-        return <Instructions />
+        return <Instructions deleteClicked={this.props.deleteClicked}/>
     }
   }
 
   renderForm = () => {
     return <CreateMemeForm
-      allMemes={this.props.allMemes}
+      allImages={this.props.allImages}
       currentMeme={this.findCurrentMeme()}
       handleCancelClick={this.props.handleCancelClick}
       setSaveClicked={this.props.setSaveClicked}
@@ -44,7 +45,7 @@ export default class Content extends Component{
   }
 
   findCurrentMeme = () => {
-    return this.props.allMemes.find(meme => this.props.currentMemeId === meme.id)
+    return this.props.allImages.find(meme => this.props.currentImageId === meme.id)
   }
 
 } //end of class

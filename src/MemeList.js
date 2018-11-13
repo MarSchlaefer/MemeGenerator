@@ -38,7 +38,7 @@ export default class MemeList extends Component {
   }
 
   makeImages = () => {
-    return this.props.allMemes.map(meme => {
+    return this.props.allImages.map(meme => {
       return <Meme
         key={meme.id}
         memeObj={meme}
