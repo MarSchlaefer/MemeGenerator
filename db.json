@@ -54,6 +54,11 @@
       "id": 11,
       "title": "take my money",
       "image_url": "https://imgflip.com/s/meme/Shut-Up-And-Take-My-Money-Fry.jpg"
+    },
+    {
+      "image_url": "https://i.ytimg.com/vi/3xYXUeSmb-Y/maxresdefault.jpg",
+      "title": "gandalf",
+      "id": 15
     }
   ],
   "created_memes": [
@@ -112,6 +117,22 @@
       "bottom": "Sibling: I'm not in your room",
       "parent_id": 3,
       "id": 8
+    },
+    {
+      "image": "https://www.meme-arsenal.com/memes/7aa1f72a227f5ae408460ce5e7cee112.jpg",
+      "title": "boro2",
+      "top": "PEACE O",
+      "bottom": "CRAPPY Poop",
+      "parent_id": 1,
+      "id": 9
+    },
+    {
+      "image": "https://i.ytimg.com/vi/3xYXUeSmb-Y/maxresdefault.jpg",
+      "title": "React",
+      "top": "React:",
+      "bottom": "50% Of You Shall Not Pass",
+      "parent_id": 15,
+      "id": 10
     }
   ]
 }

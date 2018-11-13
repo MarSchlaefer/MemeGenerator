@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Meme from './Meme'
 import ListDisplay from './ListDisplay'
 import CreatedMeme from './CreatedMeme'
+import Search from './Search'
 
 export default class MemeList extends Component {
 
@@ -15,8 +16,10 @@ export default class MemeList extends Component {
   render() {
     return (
       <div>
+        <Search />
         <ListDisplay handleSelectChange={this.handleSelectChange}/>
         {this.displaySelection()}
+        <button onClick={this.props.setNewImage}>New Image</button>
       </div>
     )
   }

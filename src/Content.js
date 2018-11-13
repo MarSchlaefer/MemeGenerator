@@ -3,6 +3,7 @@ import Instructions from './Instructions'
 import CreateMemeForm from './CreateMemeForm'
 import ShowMeme from './ShowMeme'
 import ShowClickedMeme from './ShowClickedMeme'
+import NewImageForm from './NewImageForm'
 
 export default class Content extends Component{
 
@@ -15,20 +16,24 @@ export default class Content extends Component{
   }
 
   renderContent = () => {
-      if (this.props.currentImageId && this.props.saveClicked) {
-        return <ShowMeme
-          createdMemeId={this.props.createdMemeId}
-          allCreatedMemes={this.props.allCreatedMemes}
-          />
-      } else if (this.props.currentImageId) {
-        return this.renderForm()
-      } else if (this.props.showClickedMemeId){
-        return <ShowClickedMeme
-          allCreatedMemes={this.props.allCreatedMemes}
-          showClickedMemeId={this.props.showClickedMemeId}
-          handleDeleteClick={this.props.handleDeleteClick}
+    if (this.props.currentImageId && this.props.saveClicked) {
+      return <ShowMeme
+        createdMemeId={this.props.createdMemeId}
+        allCreatedMemes={this.props.allCreatedMemes}
         />
-      } else {
+    } else if (this.props.currentImageId || this.props.editMemeId) {
+      return this.renderForm()
+    } else if (this.props.showClickedMemeId){
+      return <ShowClickedMeme
+        allCreatedMemes={this.props.allCreatedMemes}
+        showClickedMemeId={this.props.showClickedMemeId}
+        handleEditClick={this.props.handleEditClick}
+        handleDeleteClick={this.props.handleDeleteClick}
+      />
+    } else if (this.props.newImage){
+      return <NewImageForm cancelNewImage={this.props.cancelNewImage}
+        renderNewImage={this.props.renderNewImage}/>
+    } else {
         return <Instructions deleteClicked={this.props.deleteClicked}/>
     }
   }
@@ -41,6 +46,8 @@ export default class Content extends Component{
       setSaveClicked={this.props.setSaveClicked}
       allCreatedMemes={this.props.allCreatedMemes}
       reRenderMemes={this.props.reRenderMemes}
+      editMemeId={this.props.editMemeId}
+      reRenderEditedMemes={this.props.reRenderEditedMemes}
       />
   }
 

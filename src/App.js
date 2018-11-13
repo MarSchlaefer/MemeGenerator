@@ -14,7 +14,9 @@ class App extends Component {
       saveClicked: false,
       createdMemeId: null,
       showClickedMemeId: null,
-      deleteClicked: false
+      editMemeId: null,
+      deleteClicked: false,
+      newImage: false
     }
   }
 
@@ -38,6 +40,7 @@ class App extends Component {
               handleMemeClick={this.handleMemeClick}
               allCreatedMemes={this.state.createdMemesArray}
               handleNewClick={this.handleNewClick}
+              setNewImage={this.setNewImage}
             />
           </div>
           <div className='master-detail-element detail'>
@@ -51,8 +54,14 @@ class App extends Component {
               reRenderMemes={this.reRenderMemes}
               createdMemeId={this.state.createdMemeId}
               showClickedMemeId={this.state.showClickedMemeId}
+              handleEditClick={this.handleEditClick}
+              editMemeId={this.state.editMemeId}
+              reRenderEditedMemes={this.reRenderEditedMemes}
               handleDeleteClick={this.handleDeleteClick}
               deleteClicked={this.state.deleteClicked}
+              newImage={this.state.newImage}
+              cancelNewImage={this.cancelNewImage}
+              renderNewImage={this.renderNewImage}
             />
           </div>
         </div>
@@ -120,11 +129,19 @@ class App extends Component {
     return this.state.createdMemesArray.filter(meme => meme.id !== id)
   }
 
+  handleEditClick = (event, id) => {
+    console.log('in edit')
+    this.setState({
+      editMemeId: id
+    })
+  }
+
   handleNewClick = (event, id) => {
     console.log('clicked')
     this.setState({
       showClickedMemeId: id,
-      currentImageId: null
+      currentImageId: null,
+      editMemeId: null
     })
   }
 
@@ -146,6 +163,53 @@ class App extends Component {
       // debugger
       console.log(this.state.createdMemeId, 'render meme ID');
       this.setSaveClicked()
+    })
+  }
+
+  setNewImage = () => {
+    this.setState({
+      newImage: true
+    }, () => {
+      console.log(this.state.newImage)
+    })
+  }
+
+  cancelNewImage = () => {
+    this.setState({
+      newImage: false
+    }, () => {
+      console.log(this.state.newImage)
+    })
+  }
+
+  renderNewImage = (obj) => {
+    const newImages = [...this.state.imagesArray, obj]
+
+    this.setState({
+      imagesArray: newImages,
+      newImage: false
+    }, () => {
+      console.log(this.state);
+    })
+  }
+
+  reRenderEditedMemes = (obj) => {
+    const newMemes = this.state.createdMemesArray.map(meme => {
+      if (meme.id === obj.id) {
+        return obj
+      } else {
+        return meme
+      }
+    })
+
+    this.setState({
+      createdMemesArray: newMemes,
+      createdMemeId: obj.id,
+      showClickedMemeId: obj.id,
+      editMemeId: null
+    }, () => {
+      // debugger
+      console.log(this.state.createdMemeId, 'render meme ID');
     })
   }
 
