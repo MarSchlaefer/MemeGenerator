@@ -34,7 +34,9 @@ export default class Content extends Component{
       return <NewImageForm cancelNewImage={this.props.cancelNewImage}
         renderNewImage={this.props.renderNewImage}/>
     } else {
-        return <Instructions deleteClicked={this.props.deleteClicked}/>
+        return <div className='instructions'>
+        <Instructions deleteClicked={this.props.deleteClicked}/>
+        </div>
     }
   }
 

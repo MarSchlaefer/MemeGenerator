@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <div className="nav-bar">
           <ul>
-          <li className="nav-item"><h1>Welcome to Meme Generator!!</h1></li>
+          <li className="nav-item"><h1>Welcome to Memerator!!</h1></li>
           </ul>
         </div>
         <div className="container">
@@ -64,6 +64,11 @@ class App extends Component {
               renderNewImage={this.renderNewImage}
             />
           </div>
+        </div>
+        <div className="footer">
+          <ul>
+          <li className="foot-item"><h1>! Create memes - Create fun !</h1></li>
+          </ul>
         </div>
       </div>
     );

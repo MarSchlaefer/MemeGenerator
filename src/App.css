@@ -3,10 +3,11 @@
 
 .App {
   font-family: 'Didact Gothic', sans-serif;
+  color: white;
   display: flex;
   flex-direction: column;
   height: calc(100vh - 10px);
-  margin: 10px;
+  margin: 0px 10px;
 }
 
 .container {
@@ -19,9 +20,27 @@
 
 .nav-bar {
   width: 100%;
-  background-color: lightblue;
-  background-repeat: no-repeat;
-  font-size: 16px;
+  height: 10%;
+  background-color: white;
+  text-transform: uppercase;
+  font-family: impact;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  text-transform: uppercase;
+  font-family: impact;
+  font-size: 40px;
   letter-spacing: 1.5px;
   font-weight: bolder;
   display: flex;
@@ -37,10 +56,16 @@
   padding: 4px;
 }
 
+.foot-item {
+  list-style: none;
+  color: black;
+  padding: 4px;
+}
+
 .sidebar {
   width: 30%;
   overflow: scroll;
-  background-color: lightblue;
+  background-color: black;
   margin: 10px 10px 10px 0px;
   display: flex;
   flex-direction: column;
@@ -50,10 +75,11 @@
 
 .detail {
   width: 70%;
-  background-color: lightblue;
+  background-color: black;
   margin: 10px 0px 10px 10px;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
 }
 
@@ -128,16 +154,36 @@ h3 {
   top: 0;
 }
 
-button {
+.buttonContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.assorted-buttons {
+  /* position: absolute; */
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1.0em;
   border-radius: 5px;
+  margin: 5px;
+  /* width: 15%; */
+}
+
+#new-button {
+  position: absolute;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.0em;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 select {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1.0em;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 input {
@@ -145,9 +191,11 @@ input {
   font-size: 1.0em;
   border-radius: 5px;
   width: 300px;
+  margin: 5px;
 }
 
 .searchArea {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -158,11 +206,15 @@ img {
 }
 
 img:hover {
-  box-shadow: 10px 10px 13px -9px rgba(0,0,0,0.47);
+  /* box-shadow: 10px 10px 13px -9px rgb(255,255,255); */
+  border: solid;
+  border-color: white;
+  border-width: 3px;
 }
 
 button:hover {
   background-color: #D3D3D3;
+  color: black;
 }
 
 select:hover {
@@ -173,4 +225,12 @@ select:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.instructions {
+  font-size: 2.0em;
+}
+
+.instructions-item {
+  list-style: none;
 }

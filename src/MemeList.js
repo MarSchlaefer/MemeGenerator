@@ -20,7 +20,9 @@ export default class MemeList extends Component {
         <Search setSearchValue={this.setSearchValue} searchValue={this.state.searchValue}/>
         <ListDisplay handleSelectChange={this.handleSelectChange}/>
         {this.displaySelection()}
-        <button onClick={this.props.setNewImage}>New Image</button>
+        {this.state.currentListView === 'original-images' ? <div className='buttonContainer'>
+          <button id="new-button" onClick={this.props.setNewImage}>New Image</button>
+        </div>: null}
       </div>
     )
   }

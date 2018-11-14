@@ -87,12 +87,16 @@ export default class CreateMemeForm extends Component {
       <form onSubmit={this.handleNewSubmit}>
         <label> Title: </label>
           <input onChange={this.handleChange} type='text' name="title" value={this.state.title}></input>
+        <br/>
         <label> Top Text: </label>
           <input onChange={this.handleChange} type='text' name="top" value={this.state.top}></input>
+        <br/>
         <label> Bottom Text: </label>
           <input onChange={this.handleChange} type='text' name="bottom" value={this.state.bottom}></input>
-          <button type='submit' value='Submit'>Save</button>
-          <button onClick={this.props.handleCancelClick} value='Cancel'>Cancel</button>
+        <br/>
+          <button className="assorted-buttons" type='submit' value='Submit'>Save</button>
+        <br/>
+          <button className="assorted-buttons" onClick={this.props.handleCancelClick} value='Cancel'>Cancel</button>
       </form>
     </div>
   }
@@ -103,12 +107,16 @@ export default class CreateMemeForm extends Component {
         <form onSubmit={(e) => this.handleEditSubmit(e, this.findEditMeme().id)}>
           <label> Title: </label>
             <input onChange={this.handleChange} type='text' name="editTitle" value={this.state.editTitle}></input>
+            <br/>
           <label> Top Text: </label>
             <input onChange={this.handleChange} type='text' name="editTop" value={this.state.editTop}></input>
+            <br/>
           <label> Bottom Text: </label>
             <input onChange={this.handleChange} type='text' name="editBottom" value={this.state.editBottom}></input>
-            <button type='submit' value='Submit'>Save</button>
-            <button onClick={this.props.handleCancelClick} value='Cancel'>Cancel</button>
+            <br/>
+            <button className="assorted-buttons" type='submit' value='Submit'>Save</button>
+            <br/>
+            <button className="assorted-buttons" onClick={this.props.handleCancelClick} value='Cancel'>Cancel</button>
         </form>
     </div>
   }

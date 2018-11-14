@@ -13,8 +13,9 @@ export default class ShowClickedMeme extends Component{
             <p className="bottom">{this.findNewMeme().bottom}</p>
           </div>
         </div>
-        <button onClick={(event) => this.props.handleEditClick(event, this.findNewMeme().id)}>Edit</button>
-        <button onClick={(event) => this.props.handleDeleteClick(event, this.findNewMeme().id)}>Delete</button>
+        <button className="assorted-buttons" onClick={(event) => this.props.handleEditClick(event, this.findNewMeme().id)}>Edit</button>
+        <br/>
+        <button className="assorted-buttons" onClick={(event) => this.props.handleDeleteClick(event, this.findNewMeme().id)}>Delete</button>
       </div>
     )
   }
